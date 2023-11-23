@@ -1,0 +1,35 @@
+# Hardhat
+/hardhat/.vscode
+/hardhat/deployments
+/hardhat/node_modules
+/hardhat/coverage
+/hardhat/coverage.json
+/hardhat/typechain
+/hardhat/typechain-types
+/hardhat/.env
+/hardhat/cache
+/hardhat/artifacts
+/hardhat/gas-report.txt
+
+# src
+/src/node_modules
+/src/.pnp
+/src/.pnp.js
+/src/.yarn/install-state.gz
+/src/coverage
+/src/.next/
+/src/out/
+/src/build
+/src/constant
+/src/.DS_Store
+/src/*.pem
+/src/npm-debug.log*
+/src/yarn-debug.log*
+/src/yarn-error.log*
+/src/.env*.local
+/src/.vercel
+/src/*.tsbuildinfo
+/src/next-env.d.ts
+/src/.env
+
+deploy.sh

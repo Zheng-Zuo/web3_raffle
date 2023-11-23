@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .stats {
+    @apply bg-[#091F1C] text-white p-4 flex-1 rounded-md 
+    border-[#004337] border-2 shadow-lg flex flex-col gap-2 justify-between items-center
+  }
+
+  .stats-container {
+    @apply bg-[#091F1C] p-5 rounded-lg border-[#004337] border-2
+  }
+
+  .countdown {
+    @apply p-8 text-4xl text-center text-white rounded-lg  bg-[#013F34] 
+  }
+
+  .countdown-label {
+    @apply text-center text-white uppercase text-sm pt-4
+  }
+
+  .admin-button {
+    @apply bg-[#091F1C] p-2 flex-1 rounded-md border-[#004337] border-2 shadow-lg hover:bg-emerald-500/50
+  }
+}
