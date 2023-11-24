@@ -28,8 +28,8 @@ body {
 
 @layer components {
   .stats {
-    @apply bg-[#091F1C] text-white p-4 flex-1 rounded-md 
-    border-[#004337] border-2 shadow-lg flex flex-col gap-2 justify-between items-center
+    @apply bg-[#091F1C] text-white py-4 px-2 flex-1 rounded-md 
+    border-[#004337] border-2 shadow-lg flex flex-col justify-between items-center
   }
 
   .stats-container {

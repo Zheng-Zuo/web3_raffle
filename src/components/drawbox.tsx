@@ -20,7 +20,7 @@ const DrawBox = () => {
         </div>
 
         <p className="text-xs text-emerald-300 pt-6">
-          Rules: Each player can buy up to 10 tickets at a time. The raffle will draw a winner and reset around every 2 hours, when the winner is drawn, a 3% commission is taken from the total pool. The remaining 97% is distributed to the winner.
+          Rules: Player buy tickets to enter the raffle. The raffle will draw a winner and reset around every 2 hours, when the winner is drawn, a 3% commission is taken from the total pool. The remaining 97% is distributed to the winner.
           If there's only a single player during the draw (regardless of how many tickets he/she has purchased), he/she will receive the 100% of the pool.
         </p>
       </div>

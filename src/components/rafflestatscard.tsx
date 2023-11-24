@@ -30,10 +30,10 @@ const RaffleStatsCard = () => {
     }, [getBalance.data, getNumOfPlayers.data, getTicketNum.data])
 
     return (
-        <div className='flex justify-between p-2 space-x-2'>
+        <div className='flex justify-between gap-3'>
 
             <div className="stats">
-                <h2 className='text-sm'>Current Pool</h2>
+                <h2 className='text-sm'>Total Pool</h2>
                 <p className='text-lg'>{balance} ETH</p>
             </div>
 
