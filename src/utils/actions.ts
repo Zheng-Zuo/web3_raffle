@@ -231,4 +231,28 @@ export const updateInterval = () => {
     return result
 }
 
+export const parseErrorMessages = (error: any) => {
+    let errorMessage: string
+    const errorName = error.cause?.data?.errorName
+    if (errorName === 'Raffle__UpkeepNotNeeded') {
+        errorMessage = 'No need to draw'
+    } else if (errorName === 'Raffle__UnableToEnd') {
+        errorMessage = 'Can not end raffle right now'
+    } else if (errorName === 'Raffle__UnableToStart') {
+        errorMessage = 'Current raffle state is not end, can not start'
+    } else if (errorName === 'Raffle__UnableToRefund') {
+        errorMessage = 'Unable to perform refund'
+    } else if (errorName === 'Raffle__UnableToChangeInterval') {
+        errorMessage = 'Can not change interval when raffle state is not end'
+    } else if (errorName === 'Raffle__TransferFailed') {
+        errorMessage = 'Failed to transfer funds'
+    } else if (errorName === 'Raffle__InvalidEntranceFee') {
+        errorMessage = 'Purchase amount must be a multiple of the set entrance fee'
+    } else if (errorName === 'Raffle__RaffleNotOpen') {
+        errorMessage = 'Current raffle state is not open, please wait for the next round'
+    } else {
+        errorMessage = error?.shortMessage
+    }
+    return errorMessage
+}
 

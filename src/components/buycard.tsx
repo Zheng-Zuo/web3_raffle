@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { getDisplayTickets } from '@/utils'
-import { enterRaffle, getRaffleEntranceFee, getTicketsEnteredByPlayer, listenEvents } from '@/utils/actions'
+import { enterRaffle, getRaffleEntranceFee, getTicketsEnteredByPlayer, listenEvents, parseErrorMessages } from '@/utils/actions'
 import { ethers } from 'ethers'
 import { useGlobalStates } from "@/providers/GlobalStatesProvider"
 import { useAccount, useNetwork } from 'wagmi';
@@ -34,8 +34,9 @@ const BuyCard = () => {
       }).then((result) => {
         toast.success('Successfully entered the raffle')
       }).catch((err) => {
-        toast.error(err['shortMessage'])
-        console.log(err)
+        const errorMessage = parseErrorMessages(err)
+        toast.error(errorMessage)
+        // console.log(err)
       })
     } else {
       toast.error('Please connect to the Sepolia testnet')

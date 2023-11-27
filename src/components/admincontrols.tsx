@@ -5,7 +5,7 @@ import { MdOutlineNotStarted } from "react-icons/md";
 import { toast } from 'react-hot-toast';
 import { CircularProgress } from '@mui/material';
 import { useAccount, useNetwork } from "wagmi";
-import { updateInterval, endRaffle, refundRaffle, startRaffle } from "@/utils/actions";
+import { updateInterval, endRaffle, refundRaffle, startRaffle, parseErrorMessages } from "@/utils/actions";
 import { useState } from "react";
 
 
@@ -24,8 +24,9 @@ const AdminControls = () => {
       await endTx.writeAsync().then((result) => {
         toast.success('Successfully ended the raffle')
       }).catch((err) => {
-        toast.error(err['shortMessage'])
-        console.log(err)
+        const errorMessage = parseErrorMessages(err)
+        toast.error(errorMessage)
+        // console.log(err)
       })
     } else {
       toast.error('Please connect to the Sepolia testnet')
@@ -37,7 +38,8 @@ const AdminControls = () => {
       await startTx.writeAsync().then((result) => {
         toast.success('Successfully started the raffle')
       }).catch((err) => {
-        toast.error(err['shortMessage'])
+        const errorMessage = parseErrorMessages(err)
+        toast.error(errorMessage)
         console.log(err)
       })
     } else {
@@ -50,7 +52,8 @@ const AdminControls = () => {
       await refundTx.writeAsync().then((result) => {
         toast.success('Successfully refunded all players')
       }).catch((err) => {
-        toast.error(err['shortMessage'])
+        const errorMessage = parseErrorMessages(err)
+        toast.error(errorMessage)
         console.log(err)
       })
     } else {
@@ -65,7 +68,8 @@ const AdminControls = () => {
       }).then((result) => {
         toast.success('Successfully updated the raffle interval time')
       }).catch((err) => {
-        toast.error(err['shortMessage'])
+        const errorMessage = parseErrorMessages(err)
+        toast.error(errorMessage)
         console.log(err)
       })
     } else {
