@@ -5,7 +5,7 @@
 
 The Web3 Raffle Game is a blockchain-based implementation using Chainlink's VRF to generate verifiable true random numbers. It employs Chainlink automation for automatically sending ETH to winners at the end of each draw. The project involved extensive work with Hardhat plugins, deploying mocks, and conducting thorough unit testing to ensure the smart contract's robustness and reliability.
 
-Check out the **[Live Demo here](http://raffle.momocoder.com)** *(Note: Please refrain from buying a large amount of tickets in a single round on the live demo because the owner only has a limited amount of test LINK deposited in Chainlink's subscription account. This account is used for sending out ETH to the winner automatically at the end of each game. If the amount is too large, the gas fee will increase and potentially fail to trigger the send function on Chainlink automation)*. The project is deployed on the Sepolia testnet, hence you need to connect with Sepolia to interact with the contract.
+Check out the **[Live Demo here](http://raffle.momocoder.com)** *(Note: Please refrain from buying a large amount of tickets in a single round on the live demo because the owner only has a limited amount of test LINK deposited in Chainlink's subscription account. This account is used for sending out ETH to the winner automatically at the end of each game. If the amount is too large, the gas fee will increase and potentially fail to trigger the send function on Chainlink automation)*. The project is deployed on the Sepolia testnet, hence you need to connect with Sepolia to interact with the contract. You can get some free Sepolia ETH at: https://sepoliafaucet.com/
 
 ## Features
 - Fully responsive design compatible across all devices.
